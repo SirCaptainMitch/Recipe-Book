@@ -34,6 +34,7 @@ export class RecipeService {
               new Ingredient('bread', 2),
               new Ingredient('fries', 21)
             ]
+    )
   ];
 
   getRecipes(){
