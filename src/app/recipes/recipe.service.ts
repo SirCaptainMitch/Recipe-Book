@@ -16,7 +16,8 @@ export class RecipeService {
   ) { }
 
     private recipes: Recipe[] = [
-    new Recipe('A Test Recipe', 
+    new Recipe( 1,
+                'Tasty food', 
                 'This is simply a test', 
                 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Recipe_logo.jpeg/480px-Recipe_logo.jpeg',
                 [
@@ -24,7 +25,8 @@ export class RecipeService {
                   new Ingredient('fries', 20)
                 ]
               ),
-    new Recipe('A Test Recipe', 
+    new Recipe( 2,
+            'A Test Recipe', 
             'This is simply a test', 
             'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Recipe_logo.jpeg/480px-Recipe_logo.jpeg',
             [
@@ -32,7 +34,6 @@ export class RecipeService {
               new Ingredient('bread', 2),
               new Ingredient('fries', 21)
             ]
-          )
   ];
 
   getRecipes(){
@@ -41,6 +42,16 @@ export class RecipeService {
 
   addIngredient(ingredients: Ingredient[]){
     this.slService.addIngredients(ingredients);
+  }
+
+  getRecipe(id:number){ 
+    const recipe = this.recipes.find( 
+                    (x) => { 
+                     return  x.id === id 
+                    }
+                  ); 
+
+    return recipe;
   }
 
 }
