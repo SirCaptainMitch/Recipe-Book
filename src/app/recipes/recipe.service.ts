@@ -17,8 +17,8 @@ export class RecipeService {
 
     private recipes: Recipe[] = [
     new Recipe( 1,
-                'Tasty food', 
-                'This is simply a test', 
+                'Shnitzle', 
+                'A favorite in Austria', 
                 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Recipe_logo.jpeg/480px-Recipe_logo.jpeg',
                 [
                   new Ingredient('meat', 1),
@@ -26,8 +26,8 @@ export class RecipeService {
                 ]
               ),
     new Recipe( 2,
-            'A Test Recipe', 
-            'This is simply a test', 
+            'A big ole Burger', 
+            'This is a big, tasty burger', 
             'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Recipe_logo.jpeg/480px-Recipe_logo.jpeg',
             [
               new Ingredient('meat', 1),
